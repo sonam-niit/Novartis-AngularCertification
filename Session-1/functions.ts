@@ -1,4 +1,4 @@
- function add(a,b):number{
+ function add(a:number,b:number):number{
     return a+b;
  }
 
