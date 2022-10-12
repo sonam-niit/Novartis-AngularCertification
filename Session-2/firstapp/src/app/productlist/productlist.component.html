@@ -1,0 +1,19 @@
+<h1>Product List</h1>
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Id</th><th>Name</th><th>Price</th>
+            <th>Available</th><th>Rating</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let p of products">
+            <td>{{p.id}}</td>
+            <td [class.inStock]="true">{{p.name}}</td>
+            <td>{{p.price}}</td>
+            <td>{{p.available}}</td>
+            <td [style.color]="p.rating>4.5? 'green' : 'red'" >{{p.rating}}</td>
+        </tr>
+    </tbody>
+</table>

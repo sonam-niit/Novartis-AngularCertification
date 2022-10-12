@@ -1,0 +1,28 @@
+<h1>Pipe Demos</h1>
+
+<h3>Uppercase and Lowercase Pipes</h3>
+<hr>
+<p>{{name | uppercase}}</p>
+<p>{{message | lowercase}}</p>
+<h3>Date Pipe</h3>
+<hr>
+<p>{{today}}</p>
+<p>{{today | date}}</p>
+<p>{{today | date : 'dd/MM/yyyy'}}</p>
+<h3>Number Pipe</h3>
+<hr>
+<p>Original value {{number1}}</p>
+<p>{{number1 | number:'3.4-6'}}</p>
+<p>{{number1 | number:'2.10-10'}}</p>
+<h3>Currency pipe</h3>
+<hr>
+<p>{{a | currency: 'USD' : true:'4.3-3'}}</p>
+<p>{{a | currency: 'EURO' : false}}</p>
+<p>{{a | currency: 'INR' : true:'4.7-7'}}</p>
+<h3>JSON Pipe</h3>
+<hr>
+<p>{{object}}</p>
+<p>{{object | json}}</p>
+<h3>Custom pipe</h3>
+<hr>
+<p>{{message | changestring : '@'}}</p>

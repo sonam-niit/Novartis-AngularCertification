@@ -4,3 +4,12 @@
 <p>Welcome {{name}}</p>
 <!--Property Binding using attribute-->
 <a [href]="url">Click to open Google</a>
+<br>
+<button class="btn btn-primary" 
+(click)="show()">Show Image</button>
+<img *ngIf="flag" [src]="imgurl" alt="Pencil">
+<br>
+<!--Two Way Binding-->
+<input type="text" [(ngModel)]="username">
+<br>
+Welcome {{username}}
