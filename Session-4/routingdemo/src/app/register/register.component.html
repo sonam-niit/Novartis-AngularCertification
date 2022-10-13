@@ -1,0 +1,54 @@
+<div class="row">
+    <h1>Regisitration Form</h1>
+    <div class="col-md-6">
+        <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <label>First Name</label>
+                <input type="text" class="form-control" formControlName="firstName" 
+                [ngClass]="{'is-invalid':submitted && form['firstName'].errors}">
+
+                <div *ngIf="submitted && form['firstName'].errors" class="invalid-feedback">
+                    FirstName cannot be empty
+                </div> 
+            </div>
+            <div class="form-group">
+                <label>Last Name</label>
+                <input type="text" class="form-control" formControlName="lastName"
+                [ngClass]="{'is-invalid':submitted && form['lastName'].errors}">
+
+                <div *ngIf="submitted && form['lastName'].errors" class="invalid-feedback">
+                    LastName cannot be empty
+                </div> 
+            </div>
+            <div class="form-group">
+                <label>Email</label>
+                <input type="text" class="form-control" formControlName="email"
+                [ngClass]="{'is-invalid':submitted && form['email'].errors}">
+
+                <div *ngIf="submitted && form['email'].errors" class="invalid-feedback">
+                    <div *ngIf="form['email'].errors['required']">
+                        Email cannot be Empty
+                    </div>
+                    <div *ngIf="form['email'].errors['email']">
+                        Enter valid EmailId
+                    </div>
+                </div> 
+            </div>
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" class="form-control" formControlName="password"
+                [ngClass]="{'is-invalid':submitted && form['password'].errors}">
+
+                <div *ngIf="submitted && form['password'].errors" class="invalid-feedback">
+                    <div *ngIf="form['password'].errors['required']">
+                        Password cannot be Empty
+                    </div>
+                    <div *ngIf="form['password'].errors['minlength']">
+                        Password must be 8 characters long
+                    </div>
+                </div> 
+            </div><br>
+            <button class="btn btn-primary">Register</button>
+        </form>
+    </div>
+</div>
