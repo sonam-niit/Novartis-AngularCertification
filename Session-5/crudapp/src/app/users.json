@@ -1,0 +1,30 @@
+[
+    {
+        "id":1,
+        "name":"Alex",
+        "email":"alex@gmail.com",
+        "password":"alex123",
+        "country":"US"
+    },
+    {
+        "id":2,
+        "name":"BOB",
+        "email":"bob@gmail.com",
+        "password":"bob123",
+        "country":"UK"
+    },
+    {
+        "id":2,
+        "name":"Catherin",
+        "email":"catty@gmail.com",
+        "password":"catty123",
+        "country":"US"
+    },
+    {
+        "id":4,
+        "name":"Sonam",
+        "email":"sonam@gmail.com",
+        "password":"sonam123",
+        "country":"India"
+    }
+]
