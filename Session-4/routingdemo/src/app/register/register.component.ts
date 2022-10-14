@@ -11,7 +11,6 @@ export class RegisterComponent implements OnInit {
   constructor(private builder: FormBuilder) { }
   submitted:boolean=false;
   registerForm:FormGroup;
-
   ngOnInit(): void {
     this.registerForm= this.builder.group({
       firstName:['',Validators.required],
@@ -20,7 +19,6 @@ export class RegisterComponent implements OnInit {
       password:['',[Validators.required,Validators.minLength(8)]]
     })
   }
-
   get form(){
     return this.registerForm.controls;
   }

@@ -1,0 +1,61 @@
+<div class="row">
+    <h1>Add Product Form</h1>
+    <div class="col-md-6">
+        <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <label>Id</label>
+                <input type="text" class="form-control" formControlName="id" [ngClass]="{'is-invalid':submitted 
+                && form['id'].errors}" [(ngModel)]="product.id">
+
+                <div *ngIf="submitted && 
+                form['id'].errors" class="invalid-feedback">
+                    Id cannot be empty
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Name</label>
+                <input type="text" class="form-control" formControlName="name"
+                    [ngClass]="{'is-invalid':submitted && form['name'].errors}"
+                    [(ngModel)]="product.name">
+
+                <div *ngIf="submitted && form['name'].errors" class="invalid-feedback">
+                    Name cannot be empty
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Price</label>
+                <input type="number" class="form-control" formControlName="price"
+                    [ngClass]="{'is-invalid':submitted && form['price'].errors}" 
+                    [(ngModel)]="product.price">
+
+                <div *ngIf="submitted && form['price'].errors" class="invalid-feedback">
+                    <div *ngIf="form['price'].errors['required']">
+                        Price cannot be Empty
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Available Date</label>
+                <input type="text" class="form-control" formControlName="available" [ngClass]="{'is-invalid':submitted 
+                && form['available'].errors}" [(ngModel)]="product.available">
+
+                <div *ngIf="submitted && 
+                form['available'].errors" class="invalid-feedback">
+                    Available Date cannot be empty
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Rating</label>
+                <input type="text" class="form-control" formControlName="rating" [ngClass]="{'is-invalid':submitted 
+                && form['rating'].errors}" [(ngModel)]="product.rating">
+
+                <div *ngIf="submitted && 
+                form['rating'].errors" class="invalid-feedback">
+                    Rating cannot be empty
+                </div>
+            </div><br>
+            <button class="btn btn-primary">
+                Register</button>
+        </form>
+    </div>
+</div>
