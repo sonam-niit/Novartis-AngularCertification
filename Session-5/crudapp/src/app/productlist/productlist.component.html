@@ -8,6 +8,7 @@
                 <th>Price</th>
                 <th>Available Date</th>
                 <th>Rating</th>
+                <th>Operation</th>
             </tr>
         </thead>
         <tbody>
@@ -17,6 +18,12 @@
                 <td>{{p.price}}</td>
                 <td>{{p.available}}</td>
                 <td>{{p.rating}}</td>
+                <td><button class="btn btn-danger" (click)="delete(p.id)">delete</button> 
+                &nbsp;
+                <a routerLink="/details/{{p.id}}">
+                    <button class="btn btn-primary">
+                        View</button></a>
+            </td>
             </tr>
         </tbody>
     </table>
