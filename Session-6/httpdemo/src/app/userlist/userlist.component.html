@@ -1,0 +1,27 @@
+<h1>Users List</h1>
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Operations</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let u of users">
+            <td>{{u.id}}</td>
+            <td>{{u.name}}</td>
+            <td>
+                <a routerLink="/details/{{u.id}}">
+                    <button class="btn btn-success">View</button>
+                </a>
+                &nbsp;
+                <button (click)="delete(u.id)" class="btn btn-danger">Delete</button>
+                &nbsp;
+                <a routerLink="/edituser/{{u.id}}">
+                    <button class="btn btn-primary">Edit</button>
+                </a>
+            </td>
+        </tr>
+    </tbody>
+</table>

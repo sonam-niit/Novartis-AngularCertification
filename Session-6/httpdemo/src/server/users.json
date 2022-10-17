@@ -3,13 +3,19 @@
     {
       "id": 1,
       "name": "Alex",
-      "email": "alex@microsoft.com",
-      "country": "US"
+      "email": "alex@gmail.com",
+      "country": "UK"
     },
     {
       "id": 2,
       "name": "BOB",
       "email": "bob@microsoft.com",
+      "country": "India"
+    },
+    {
+      "id": "3",
+      "name": "Sonam Soni",
+      "email": "sonam@gmail.com",
       "country": "India"
     }
   ]
