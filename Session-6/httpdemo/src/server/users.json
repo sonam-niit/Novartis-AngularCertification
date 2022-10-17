@@ -11,12 +11,6 @@
       "name": "BOB",
       "email": "bob@microsoft.com",
       "country": "India"
-    },
-    {
-      "id": 3,
-      "name": "Krishna Shah",
-      "email": "krish.shah@gmail.com",
-      "country": "US"
     }
   ]
 }
