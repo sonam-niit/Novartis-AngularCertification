@@ -1,0 +1,18 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "sonam soni",
+      "email": "sonam@gmail.com",
+      "password": "sonam@123",
+      "country": "India"
+    },
+    {
+      "id": 2,
+      "name": "Alex John",
+      "email": "alex@gmail.com",
+      "password": "alex@123",
+      "country": "US"
+    }
+  ]
+}
