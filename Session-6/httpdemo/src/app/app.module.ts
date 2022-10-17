@@ -9,6 +9,10 @@ import { EdituserComponent } from './edituser/edituser.component';
 import { DetailsComponent } from './details/details.component';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { UserService } from './user.service';
+import { CustomerModule } from './customer/customer.module';
+import { Highlight } from './shared/mydirective';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -21,9 +25,11 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,ReactiveFormsModule,HttpClientModule
+    FormsModule,ReactiveFormsModule,HttpClientModule,
+    CustomerModule,
+    SharedModule
   ],
-  providers: [],
+  providers: [UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
